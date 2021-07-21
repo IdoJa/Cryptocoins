@@ -1,0 +1,312 @@
+
+
+
+.myTitle {
+    text-align: center;
+    color: white;
+}
+
+#about-content {
+    background-color: rgba(252, 252, 252, 0.9);
+    width: 100%; /* 100% */
+    height: 800px; /* 100%  600*/
+}
+
+.parallax {
+  /* The image used */
+  background-image: url('assets/images/bitcoin-3406171.jpg');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1.0;
+}
+
+#about-content {
+    padding: 20px;
+}
+
+.about-header {
+    display: inline-block;
+}
+
+.about-p {
+    display: inline-block;
+    padding-left: 20px;
+}
+
+.myfa {
+    padding: 8px;
+}
+
+.my-be-advised-color {
+    color: red;
+}
+
+.my-center {
+    text-align: center;
+}
+
+.my-img {
+    display: inline;
+    position: relative;
+    float: right; 
+    right: 5px;
+    border-radius: 50%;
+    width: 112px; /* 224 */
+    height: 97px; /* 195 */
+}
+
+.my-footer-img {
+    width: 112px; /* 224 */
+    height: 97px; /* 195 */
+}
+
+.navbar-container {
+  width: 60%;
+  margin: auto auto; /* centers content */
+  padding: 10px;
+}
+
+
+.navbar {
+    display: inline-block;
+}
+
+
+
+#myContainer {
+  width: 60%;
+  margin: auto auto; /* centers content */
+  padding: 10px;
+  
+  /*font-size: 1.3em; */
+  /*line-height: 1.5; */
+}
+
+#myContainer > .card {
+    display: inline-block; 
+    overflow: auto;
+    background-color: rgba(252, 252, 252, 0.7);
+    /* left: 4%; */
+}
+
+.card-title {
+    display: inline-block;
+}
+
+.card .card-body {
+    background-color: rgba(252, 252, 252, 0.3);
+}
+
+.card-body > img {
+    height: 25px;
+    width: 25px;
+}
+
+/* Toggle Button CSS */
+.position-btn {
+    display: inline-block;
+    left: 79%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.toggle-btn {
+    width: 40px; /* 80px */
+    height: 20px; /* 20px */
+    background: gray;
+    border-radius: 30px;
+    transition: all 300ms ease-in-out;
+}
+
+.toggle-btn > .inner-circle {
+    width: 20px; /* 20px */
+    height: 20px; /* 20px */
+    background: white;
+    border-radius: 50%;
+    transition: all 300ms ease-in-out;
+}
+
+.toggle-btn.active {
+    background: #2f7cff;
+
+}
+
+.toggle-btn.active > .inner-circle {
+    margin-left: 20px; /* 20px */
+}
+
+
+/* Main Spinner */
+.spinner-wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: #151515; /* #151515; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner {
+    position: relative;
+    width: 8rem; 
+    height: 8rem; 
+    border-radius: 50%;
+    
+}
+
+.spinner::before,
+.spinner:after{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.spinner:before {
+    width: 100%;
+    height: 100%;
+    background-image:linear-gradient(90deg, #340ce9 0%,#333399 100% ); /* #ff00cc 0%,#333399 100% ); */
+    animation: spin .5s infinite linear;
+}
+.spinner:after {
+    width: 90%;
+    height: 90%;
+    background-color: #151515;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* More Info Spinner */
+#loading {
+  display: inline-block;
+  background-color: rgba(255,255,255,.8); /* #fff */
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255,255,255,.3); /* .3 */
+  border-radius: 50%;
+  border-top-color: black; /* #fff */
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+
+
+#myContainer {
+    min-height: 90vh;
+}
+
+footer {
+    height: 10vh;
+}
+
+
+/* Footer */
+ section.event-footer {
+    background-color: black;
+}
+
+.event-footer-Maintitles {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+section.event-footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.event-footer-img {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.event-footer-img>img {
+    max-height: 130px;
+    max-width: 100%;
+}
+
+
+
+.bottom-social-group {
+    text-align: center;
+}
+
+.event-footer-content {
+    margin-bottom: 10px;
+    font-weight: 100;
+}
+
+.event-footer-bottom {
+    padding: 15px 0px;
+}
+
+.row {
+    margin: 0px;
+}
+
+.event-footer-bottom {
+    background-color: rgba(00, 00, 00, 0.13);
+    text-align: center;
+    color: #ffffff;
+}
+
+.event-footer span {
+    font-size: 17px;
+    color: #ffffff;
+    font-weight: 100;
+}
+
+span.bottom-elements {
+    padding: 0px 10px;
+}
+
+span.bottom-elements:hover {
+    opacity: 0.5;
+    transition: 0.4s;
+}
+
+@media (min-width: 768px) {
+    .event-footer-section {
+        padding: 45px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .event-footer-section {
+        padding: 20px;
+    }
+
+    .event-footer-section {
+        text-align: center;
+    }
+}
+
+

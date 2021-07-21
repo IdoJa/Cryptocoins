@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="jquery-3.5.1.js"></script>
+    <script defer src="main.js"></script>
+
+    <!-- Bootsrap CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+        
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Bootsrap JS-->
+    <!-- Jquery bootsrap version removed - using jquery-3.5.1.js version -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- Font awesome  -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+
+    <!-- CanvasJS -->
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+
+</head>
+
+<body>
+
+
+    <!-- Parallax -->
+    <div class="parallax">
+        <header>
+            <h2 class="myTitle" onclick="displayHome()">Cryptocurrency Explorer</h2>
+        </header>
+    <main>
+            <!-- Navbar -->
+            <div class="navbar-container">
+                <nav class="navbar">
+                    <button class="btn btn-primary" id=show-btn onclick="displayHome()">Home</button>
+                    <button class="btn btn-primary" id=show-btn onclick="displayLiveReports()"">Live Reports</button>
+                        <button class=" btn btn-primary" id=show-btn onclick="displayAbout()"">About</button>
+                        
+                        <input  class=" navbar-search-content" type="text" id="coinInput" placeholder="Search for coins.."
+                        title="Type in a name">
+                        <button class="btn btn-primary navbar-search-content" id=show-btn onclick="searchCoin()">Search</button>
+                        <button class="btn btn-primary navbar-search-content" id=show-btn onclick="showAll()">Show
+                            all</button>
+                </nav>
+            </div>
+        
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+                data-backdrop="static" data-keyboard="false">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="myModalLabel"></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeModal()">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body" id="myModalBody">
+        
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                                onclick="closeModal()">Close</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"
+                                onclick="saveChangesInModal()">Save
+                                changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal END -->
+        
+            <!-- myContainer -->
+            <div id="myContainer">
+                <!-- Spinner -->
+                <div class='spinner-wrapper'>
+                    <div class="spinner"></div>
+                </div>
+                <!-- Dynamic Content-->
+            </div>
+        
+    </main>
+</div>
+        <!-- Footer -->
+        <footer>
+            <section class="event-footer">
+
+                <div class="row footer-top">
+
+                    <div class="col-xs-12 col-md-2 event-footer-section"></div>
+                    
+                    <div class="col-xs-12 col-md-4 event-footer-section">
+                        <div class="event-footer-Maintitles">
+                            Site Rights
+                        </div>
+                        <div class="event-footer-content">
+                            <span id="site-rights-content">
+                                <!-- insertSiteRightsContent(); -->
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="col-xs-12 col-md-3 event-footer-section">
+                        <div class="event-footer-Maintitles">
+                            Need a hand?
+                        </div>
+                        <div class="event-footer-content">
+                            <span>
+                                Learn more how to use this site and check its instructions.
+                            </span>
+                            <div><button type="button" class="btn btn-primary" style="margin-top: 20px;" onclick="displayAbout()">Learn more</button></div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-xs-12 col-md-3 event-footer-section bottom-social-group">
+
+                        <div class="event-footer-Maintitles">Find Me On</div>
+                        <a href="#" class="event-footer-social" title="Facebook link" target="_blank" href="">
+                            <i class="fa fa-facebook fa-2x myfa"></i>
+                        </a>
+                        <a href="#" class="event-footer-social" title="Facebook link" target="_blank" href="">
+                            <i class="fa fa-twitter fa-2x myfa"></i>
+                        </a>
+                        <a href="#" class="event-footer-social" title="Facebook link" target="_blank" href="">
+                            <i class="fa fa-linkedin fa-2x myfa"></i>
+                        </a>
+                        <br><br>
+                    </div>
+
+                </div>
+
+                <div class="row footer-bottom">
+                    <div class="event-footer-bottom col-xs-12 col-md-12">
+                        <span class="bottom-elements">
+                            <a href="#" onclick="displayHome()">
+                                Home </a>
+                        </span><span class="bottom-elements">
+                            <a href="#" onclick="displayLiveReports()">
+                                Live Reports </a>
+                        </span><span class="bottom-elements">
+                            <a href="#" onclick="displayAbout()">
+                                About </a>
+                        </span>
+                    </div>
+
+                </div>
+
+            </section>
+        </footer>
+</body>
+
+</html>
