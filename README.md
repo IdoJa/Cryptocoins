@@ -1,6 +1,6 @@
 # cryptocoins
 Cryptocoins Project
-https://idoja.github.io/cryptocoins/
+https://idoja.github.io/Cryptocoins/
 
 The Cryptocurrency Explorer lets you explore the diverse of cryptocurrency coins on the market.
 Every coin has its functionality some are unique and some are similar.
